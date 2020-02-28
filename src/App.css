@@ -46,4 +46,6 @@
  body {
   background-image: url('https://cdn1.vectorstock.com/i/1000x1000/01/30/fairytale-background-unicorns-funny-vector-21310130.jpg');
   height: 100%;
+  background-size: contain;
+  background-size: cover;
 }
