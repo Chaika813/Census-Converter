@@ -24,17 +24,19 @@ class CencucTractsConverter extends React.Component {
         // 1. save input to variable
         const needToConvert = this.state.inputOneText 
         // 2. split text by comma
-        const splitedInput = needToConvert.split(", ")
+    const splitedInput = needToConvert.split(", ").map((i) => '\''+ i + '\'')
         // 3. you'll have array, trim each value so there is no spaces before and after - trim()
         
         // 4. for each value add ' before and after
-         for (let i=0; i < splitedInput.length; i++) {
-         splitedInput[i]= '\''+ splitedInput[i] + '\''
-          }
-         
+        //  for (let i=0; i < splitedInput.length; i++) {
+        //  splitedInput[i]= '\''+ splitedInput[i] + '\''
+        //   }
+     
+        alert(`There are ${splitedInput.length} number of locations`);
         // // // 5. join all values with comma
          const joinedInput = splitedInput.join()
         // 6. display it in second text area
+     
          console.log(joinedInput)
         this.setState ({
             inputTwoText: joinedInput
